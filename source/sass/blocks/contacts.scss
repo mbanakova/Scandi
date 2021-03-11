@@ -28,7 +28,11 @@
   border: none;
   width: 590px;
   height: 624px;
-  background-image: url("../../img/map.png");
+  background-image: url("../img/map.png");
   background-size: cover;
   background-position: center;
+
+  @media (min-resolution: $extra) {
+    background-image: url("../img/map.webp");
+  }
 }
