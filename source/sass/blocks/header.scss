@@ -1,5 +1,5 @@
 .header {
-  background-image: url("../../img/header.png");
+  background-image: url("../img/header.png");
   background-color: $bg-med;
   background-size: cover;
   background-position: center;
@@ -9,7 +9,7 @@
   padding-bottom: 30vh;
 
   @media (min-resolution: $extra) {
-    background-image: url("../../img/header@2.png");
+    background-image: url("../img/header@2.png");
   }
 }
 
