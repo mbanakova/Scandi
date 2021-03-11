@@ -27,15 +27,15 @@
   }
 
   &:nth-of-type(2) .portfolio__cube--text::before {
-    background-image: url("../../img/portfolio2.png");
+    background-image: url("../img/portfolio2.png");
   }
 
   &:nth-of-type(3) .portfolio__cube--text::before {
-    background-image: url("../../img/portfolio3.png");
+    background-image: url("../img/portfolio3.png");
   }
 
   &:nth-of-type(4) .portfolio__cube--text::before {
-    background-image: url("../../img/portfolio4.png");
+    background-image: url("../img/portfolio4.png");
   }
 
   &:hover .portfolio__cube--img {
@@ -93,7 +93,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url("../../img/portfolio1.png");
+      background-image: url("../img/portfolio1.png");
       opacity: 0.2;
     }
   }
