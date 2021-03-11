@@ -1,0 +1,20 @@
+.section-title {
+  @include fields();
+  @include font(4rem, 50px, 400);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: center;
+
+  &--left {
+    text-align: left;
+  }
+
+  &--inverse {
+    color: $white;
+    margin-bottom: 24px;
+  }
+
+  &--team {
+    margin-bottom: 120px;
+  }
+}

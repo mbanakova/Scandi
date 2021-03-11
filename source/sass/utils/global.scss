@@ -1,0 +1,36 @@
+html {
+  @include font();
+}
+
+body {
+  @include fields();
+  font-size: 1.8rem;
+  font-family: $font;
+  position: relative;
+  min-width: $desktop;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: $bg-light;
+  color: $text;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline-color: $outline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  flex-grow: 1;
+}

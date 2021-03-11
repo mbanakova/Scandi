@@ -1,0 +1,26 @@
+.about {
+  padding-top: 65px;
+  padding-bottom: 21px;
+}
+
+.about__wrapper {
+  max-width: 1036px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 63px;
+}
+
+.about__wrapper img {
+  min-width: 445px;
+}
+
+
+.about__wrapper picture {
+  height: 465px;
+}
+
+.about__text {
+  @include fields();
+  margin-bottom: 30px;
+}

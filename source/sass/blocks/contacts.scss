@@ -1,0 +1,34 @@
+.contacts {
+  background-color: $bg-dark;
+  color: $white;
+}
+
+.contacts__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__application {
+  padding: 50px 40px;
+  max-width: 507px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts p {
+  @include fields();
+  margin-bottom: 50px;
+  opacity: 0.6;
+  text-align: center;
+}
+
+
+.contacts__map {
+  border: none;
+  width: 590px;
+  height: 624px;
+  background-image: url("../../img/map.png");
+  background-size: cover;
+  background-position: center;
+}

@@ -1,0 +1,56 @@
+.header {
+  background-image: url("../../img/header.png");
+  background-color: $bg-med;
+  background-size: cover;
+  background-position: center;
+  min-height: 715px;
+  height: 100vh;
+  padding-top: 35px;
+  padding-bottom: 30vh;
+
+  @media (min-resolution: $extra) {
+    background-image: url("../../img/header@2.png");
+  }
+}
+
+.header__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__nav {
+  margin-bottom: 88px;
+}
+
+.header__intro {
+  max-width: 534px;
+  margin-left: 85px;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.header__title {
+  @include fields();
+  @include font(5rem, 62px, 400);
+  margin-bottom: 20px;
+}
+
+.header__text {
+  @include fields();
+  @include font(1.8rem, 30px, 400);
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+.header__link {
+  @include a();
+  @include blink();
+  @include font(2rem, 24px, 500);
+  padding: 25px 66px;
+  background-color: $rose;
+  align-self: flex-start;
+}

@@ -1,0 +1,76 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow: hidden;
+}
+
+.form__input {
+  position: relative;
+}
+
+.form input:focus + label span,
+.form input:valid + label span {
+  @include font(1.4rem, 14px, 500);
+  transform: translateY(-200%);
+  color: $bg-med;
+}
+
+.form input:focus + label::after,
+.form input:valid + label::after  {
+  transform: translateX(0%);
+}
+
+.form input[type="tel"],
+.form input[type="text"] {
+  @include font(1.8rem, 20px, 400);
+  padding: 20px 0 10px;
+  width: 100%;
+  height: 100%;
+  font-family: $font;
+  border: none;
+  outline: none;
+  color: $bg-light;
+  background-color: transparent;
+
+  &::placeholder {
+    color: $bg-light;
+  }
+}
+
+.form button {
+  @include button();
+  @include blink();
+  @include font(2rem, 24px, 500);
+  margin-top: 16px;
+  padding: 25px 66px;
+  background-color: $rose;
+}
+
+.form label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid $white;
+
+  &::after {
+    @include pseudo();
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    border-bottom: 3px solid $bg-med;
+    transform: translateX(-100%);
+    transition: transform .3s ease;
+  }
+}
+
+.form span {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  transition: all .3 ease;
+}

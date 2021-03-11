@@ -1,0 +1,34 @@
+.nav {
+  @include font(1.6rem, 19px, 400);
+  display: flex;
+  align-items: flex-start;
+}
+
+.nav__logo {
+  margin-right: 78px;
+  flex-shrink: 0;
+}
+
+.nav__list {
+  @include ul();
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+}
+
+.nav__link {
+  @include a();
+  @include underline();
+  padding: 5px 17px 5px 12px;
+}
+
+.nav__tel {
+  @include a();
+  @include underline();
+  flex-shrink: 0;
+  padding: 5px 0;
+
+  &:hover::after {
+    width: 100%;
+  }
+}

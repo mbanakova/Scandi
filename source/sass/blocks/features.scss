@@ -1,0 +1,27 @@
+.features {
+  padding: 85px 0 81px;
+  background-color: $bg-dark;
+  color: $white;
+}
+
+.features__list {
+  @include ul();
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-transform: uppercase;
+  text-align: center;
+  gap: 100px;
+}
+
+.features__item span {
+  @include fields();
+  @include font(5rem, 62px, 400);
+  display: block;
+  margin-bottom: 9px;
+
+}
+
+.features__item p {
+  @include fields();
+  @include font(3rem, 36px, 500);
+}

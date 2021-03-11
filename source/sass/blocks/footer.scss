@@ -1,0 +1,33 @@
+.footer {
+  margin-top: auto;
+  padding: 33px 0;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap
+}
+
+.footer__tel {
+  @include a();
+  @include underline();
+  text-align: left;
+  margin-right: 42px;
+}
+
+.footer__address {
+  @include a();
+  font-style: normal;
+  text-align: left;
+  margin-right: auto;
+}
+
+.footer__company {
+  @include fields();
+  margin-left: 42px;
+
+  &:hover::after {
+    width: 100%;
+  }
+}

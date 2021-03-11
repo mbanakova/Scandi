@@ -1,0 +1,42 @@
+.routine {
+  padding-top: 20px;
+  padding-bottom: 80px;
+  background-color: $bg-med;
+}
+
+.routine__list {
+  @include ul();
+  counter-reset: myCounter;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+}
+
+.routine__item {
+  padding-top: 90px;
+  position: relative;
+
+  &::before {
+    @include font(3rem, 30px, 500);
+    position: absolute;
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    background-color: $bg-dark;
+    color: $white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.routine__item p {
+  @include fields();
+  text-align: center;
+}

@@ -1,0 +1,115 @@
+.portfolio {
+  padding: 65px 0;
+}
+
+.portfolio__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio__list {
+  @include ul();
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: 1fr 184px 1fr;
+  grid-template-rows: 451px;
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+}
+
+.portfolio__item {
+  position: relative;
+  min-height: 451px;
+  overflow: hidden;
+
+  &--wide {
+    grid-column: span 2;
+  }
+
+  &:nth-of-type(2) .portfolio__cube--text::before {
+    background-image: url("../../img/portfolio2.png");
+  }
+
+  &:nth-of-type(3) .portfolio__cube--text::before {
+    background-image: url("../../img/portfolio3.png");
+  }
+
+  &:nth-of-type(4) .portfolio__cube--text::before {
+    background-image: url("../../img/portfolio4.png");
+  }
+
+  &:hover .portfolio__cube--img {
+      transform: translateY(-100%) rotateX(90deg);
+      background-color: rgba($bg-slider, .8);
+    }
+  &:hover .portfolio__cube--text {
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+.portfolio__item img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio__button {
+  @include button();
+  @include underline();
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+
+  & svg {
+    height: 100%;
+    align-self: center;
+    margin-left: 10px;
+  }
+}
+
+.portfolio__cube {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+
+  &--img {
+    z-index: 1;
+    transform-origin: bottom;
+    background-color: rgba($bg-slider, .8);
+  }
+
+  &--text {
+    background-color: $bg-slider;
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+    z-index: 3;
+
+    &::before {
+      @include pseudo();
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../../img/portfolio1.png");
+      opacity: 0.2;
+    }
+  }
+}
+
+.portfolio__text {
+  text-align: center;
+  color: $white;
+  padding: 80px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  & h3, span, p {
+    @include fields();
+  }
+}
